@@ -6,4 +6,4 @@ COPY check_readability.py /check_readability.py
 
 COPY requirements.txt /requirements.txt
 
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
