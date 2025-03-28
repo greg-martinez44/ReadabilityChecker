@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM python:3.12
 
 COPY --chmod=755 entrypoint.sh /entrypoint.sh
 
