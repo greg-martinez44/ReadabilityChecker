@@ -1,0 +1,17 @@
+name: 'Readability checker'
+description: 'Runs Markdown files through the textstat library checks.'
+inputs:
+  markdown-file:
+    description: 'The Markdown file path.'
+    required: true
+outputs:
+  fre:
+    description: 'The Flesch Reading Ease score.'
+  fkgl:
+    description: 'The Flesch-Kincaid grade level.'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.markdown-file }}
